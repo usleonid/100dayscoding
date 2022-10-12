@@ -9,6 +9,7 @@ def chkPair(A, size, x):
     for i in range(size - 1):
         for j in range(i + 1, size):
             if (A[i] + A[j] == x):
+                print(A[i], A[j])
                 return 1
     return 0
 
