@@ -1,4 +1,5 @@
 import random
+from replit import clear
 from hangman_words import word_list
 from hangman_art import logo
 from hangman_art import stages
@@ -22,6 +23,7 @@ while display.count('_') > 0 or lives > 0:
   attempt += 1
   print(f"\nAttempt No. {attempt}")
   guess = input("Guess a letter: ").lower()
+  clear()
 
   for position in range(len(chosen_word)):
       if chosen_word[position] == guess:
