@@ -1,5 +1,6 @@
 from art import logo
-import random
+# import random
+from random import randint
 
 EASY_LEVEL = 10
 HARD_LEVEL = 5
@@ -33,7 +34,7 @@ def guess_the_number(number):
 
 print(logo)
 print("Welcome to the Number Guessing Game!\nI'm thinking of a number between 1 and 100.")
-secret_number = random.choice(range(1,101))
+secret_number = randint (1,100)
 # print(f"Pssst, the correct answer is {secret_number}")
 
 guess_the_number(secret_number)

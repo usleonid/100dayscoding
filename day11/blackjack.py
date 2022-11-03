@@ -40,7 +40,7 @@ def count_scores(list_of_cards):
 
 
 def card_issue(list_of_cards):
-    card_on_hand = random.choices(card_deck,
+    card_on_hand = random.choices(list_of_cards,
                                   weights=None,
                                   cum_weights=None,
                                   k=1)
