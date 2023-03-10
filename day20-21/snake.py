@@ -16,6 +16,14 @@ class Snake:
         for _ in range(3):
             self.add_snake_part(shape, color, x, y)
 
+    def reset_snake(self, x, y, shape, color):
+        for seg in self.snake:
+            seg.goto(1000, 1000)
+        self.snake.clear()
+        self.create_snake(shape, color, x, y)
+        self.head = self.snake[0]
+        self.create_snake(shape, color, x, y)
+
     def add_snake_part(self, shape, color, x, y):
         snake_part = t.Turtle(shape)
         snake_part.penup()

@@ -1,6 +1,7 @@
 import turtle as t
 import time
 from player import Player
+from player import FINISH_LINE_Y
 from car_manager import CarManager
 from scoreboard import Scoreboard
 
@@ -27,7 +28,7 @@ while game_is_on:
     carManager.createCar()
     carManager.moveCar()
 
-    if player.ycor() >= 270:
+    if player.ycor() >= FINISH_LINE_Y:
         if speed > 0.01:
             speed -= 0.01
             scoreboard.level_up()
